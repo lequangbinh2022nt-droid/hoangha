@@ -1,0 +1,172 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách PC Giá Rẻ</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* phần body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* khung chứa danh sách sản phẩm */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* chia làm 3 cột bằng nhau */
+            gap: 15px; /* khoảng cách giữa các thẻ */
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* thẻ sản phẩm */
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.3s ease;
+        }
+
+            .product-card:hover {
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+
+        /* phần hình ảnh */
+        .product-image {
+            position: relative;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+            .product-image img {
+                max-width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        /* thông tin sản phẩm */
+        .product-info {
+            flex-grow: 1;
+        }
+
+        .product-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d32f2f; /* Màu đỏ cam */
+            margin-bottom: 8px;
+        }
+
+        .old-price {
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 8px;
+            font-weight: normal;
+        }
+
+        .product-title {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+
+
+
+
+        .stock-status i {
+            margin-right: 5px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+
+            .add-to-cart-btn:hover {
+                background-color: #115293;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="product-grid">
+
+        <!-- sản phẩm 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://hoanghapccdn.com/media/product/250_3562_rg_es124gd_ha1s.jpg" alt="PC 1">
+
+            </div>
+            <div class="product-info">
+                <div class="product-price">4.750.000 đ</div>
+                <div class="product-title">
+                    Switch Ruijie Reyee RG-ES124GD 24-Port 10/100/1000 Mbps
+                </div>
+            </div>
+
+        </div>
+
+        <!-- sản phẩm 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://hoanghapccdn.com/media/product/250_7256_router_tp_link_archer_ax10_wi_fi_6_ax1500_h2.jpg" alt="PC 2">
+
+            </div>
+            <div class="product-info">
+                <div class="product-price">
+                    1.450.000 đ
+                </div>
+                <div class="product-title">
+                    Router TP-Link Archer AX10 Wi-Fi 6 AX1500 (4 Ăng-ten ngoài)
+                </div>
+            </div>
+
+        </div>
+
+        <!-- sản phẩm 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://hoanghapccdn.com/media/product/250_3494_lgs352c_eu_sale_t6_2026.jpg" alt="PC 3">
+            </div>
+            <div class="product-info">
+                <div class="product-price">
+                    3.950.000 đ
+
+                </div>
+                <div class="product-title">
+                    Switch Linksys LGS352C-EU 48-Port 10/100/1000 Mbps
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
